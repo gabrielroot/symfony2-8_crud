@@ -1,0 +1,24 @@
+.navigation{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFA756;
+    height: 80px;
+    font-size: 2em;
+}
+
+.navigation div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.navigation div:last-child{
+    cursor: pointer;
+    background-color: #E2832B;
+    color: white;
+}
