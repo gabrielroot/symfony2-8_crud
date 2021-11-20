@@ -45,7 +45,7 @@
     margin-top: 30px;
     padding: 15px 10px;
     background-color: #ffcca5;
-    width: 120%;
+    width: calc(100% + 50px);
     text-align: center;
     box-shadow: 0px 0px 15px 1px #00000026;
     font-size: 1.5em;
