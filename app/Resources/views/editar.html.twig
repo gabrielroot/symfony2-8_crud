@@ -8,18 +8,6 @@
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="conteudo">
-        <a href="#" class="floatingAdd">
-            <span class="material-icons">
-                add
-            </span>
-        </a>
-
-        {% for item in produtos %}
-            {% set var = { 'item': item } %}
-            {% include 'components/card.html.twig' with var %}
-        {% endfor %}
-
-    </div>
+    <h1>TELA EDIÇÂO</h1>
 {% endblock %}
 

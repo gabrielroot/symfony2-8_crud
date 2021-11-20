@@ -19,6 +19,7 @@
     width: 79px;
     height: 79px;
     text-decoration: none;
+    box-shadow: 0px 8px 20px 3px #b95900d1;
 }
 
 .floatingAdd span{

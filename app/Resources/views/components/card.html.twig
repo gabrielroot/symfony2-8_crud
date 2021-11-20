@@ -1,13 +1,13 @@
-<a class="linkItens" href="#">
+<a class="linkItens" href="{{ path('adminEditar', {'id': var.item.id}) }}">
     <div class="item">
-        <p class="nomeItem">item.nome</p>
+        <p class="nomeItem">{{ var.item.nome }}</p>
         <div class="date">
             <p>Comprado em:</p>
-            <p class="dia">22</p>
-            <p>10/21</p>
+            <p class="dia">{{ var.item.dataCompra|date('d') }}</p>
+            <p>{{ var.item.dataCompra|date('m/y') }}</p>
         </div>
         <div class="valor">
-            <p>item.valor</p>
+            <p>R$ {{ var.item.valor }}</p>
         </div>
     </div>
 </a>
