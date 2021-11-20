@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/card.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ include('default/navigation/navigation.html.twig')}}
+    <div class="conteudo">
+        <a href="#" class="floatingAdd">
+            <span class="material-icons">
+                add
+            </span>
+        </a>
+        {{ include('components/card.html.twig')}}
+        {{ include('components/card.html.twig')}}
+        {{ include('components/card.html.twig')}}
+        {{ include('components/card.html.twig')}}
+        {{ include('components/card.html.twig')}}
+        {{ include('components/card.html.twig')}}
+        {{ include('components/card.html.twig')}}
+{#        {% for article in articles %}#}
+{#            {{ include('article/article_details.html.twig', { 'article': article }) }}#}
+{#        {% endfor %}#}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,51 @@
+.linkItens{
+    text-decoration: none;
+    color: #222222;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    min-width: 240px;
+    min-height: 250px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px 1px #00000026;
+}
+
+.item .nomeItem{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+}
+
+.item div:first-of-type{
+    margin-top: 30px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.item div:first-of-type p:first-child{
+    text-align: left;
+}
+
+.item div:first-of-type .dia{
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.item div:first-of-type p:last-child{
+    font-weight: normal;
+}
+
+.item .valor{
+    margin-top: 30px;
+    padding: 15px 10px;
+    background-color: #ffcca5;
+    width: 120%;
+    text-align: center;
+    box-shadow: 0px 0px 15px 1px #00000026;
+}

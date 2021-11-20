@@ -1,3 +1,27 @@
-body{
-    background-color: red;
+.conteudo{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 70px;
+    justify-content: space-around;
+    max-width: 1200px;
+}
+
+.floatingAdd{
+    position: fixed;
+    right: 50px;
+    margin-top: 55vh;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F08522;
+    width: 79px;
+    height: 79px;
+    text-decoration: none;
+}
+
+.floatingAdd span{
+    font-size: 64px;
+    color: white;
 }
