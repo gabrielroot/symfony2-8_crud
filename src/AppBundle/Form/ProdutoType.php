@@ -13,10 +13,33 @@ class ProdutoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nome', TextType::class)
-            ->add('dataCompra', DateType::class)
-            ->add('valor', NumberType::class)
-            ->add('save', SubmitType::class, ['label' => 'Salvar'])
+            ->add('nome', TextType::class,
+                [
+                    'attr'=>['class'=>'inptNome']
+                ]
+            )
+
+            ->add('dataCompra', DateType::class,
+                [
+                    'label' => 'Data de Compra',
+                    'attr'=>['class'=>'inptData']
+                ]
+            )
+
+            ->add('valor', NumberType::class,
+                [
+                    'invalid_message' => 'O valor inserido não é valido',
+                    'label' => 'R$ Valor',
+                    'attr'=>['class'=>'inptValor']
+                ]
+            )
+
+            ->add('submit', SubmitType::class,
+                [
+                    'label' => 'Salvar',
+                    'attr' => ['class' => 'btnSubmit']
+                ]
+            )
         ;
     }
 }

@@ -16,8 +16,7 @@
         </a>
 
         {% for item in produtos %}
-            {% set var = { 'item': item } %}
-            {% include 'components/card.html.twig' with var %}
+            {{ include('components/card.html.twig', { 'item': item }) }}
         {% endfor %}
 
     </div>

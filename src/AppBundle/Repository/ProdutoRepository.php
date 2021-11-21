@@ -10,4 +10,10 @@ namespace AppBundle\Repository;
  */
 class ProdutoRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllOrderedById(){
+        return $this->createQueryBuilder('p')
+            ->orderBy('p.id', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
 }

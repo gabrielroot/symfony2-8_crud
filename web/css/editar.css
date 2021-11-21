@@ -1,3 +1,130 @@
-form{
-    margin-top: 120px;
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 85px;
+    width: 70vw;
+    min-height: 75vh;
+    background-color: #F3F3F3;
+    box-shadow: 0px 0px 15px 1px #00000026;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #F08522;
+}
+
+.title h2{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: -1px 3px 5px #000000bd;
+}
+
+form[name='produto']{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+form[name='produto'] div{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+div label{
+    background-color: #FFC692;
+    padding: 10px;
+    width: 170px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+div input[type='text']:focus,
+div .inptData select:focus{
+    box-shadow: 0px 0px 15px 1px #ff390066;
+}
+
+div input[type='text'],
+div .inptData select{
+    margin-left: 10px;
+    margin-right: 4px;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 80%;
+    padding: 0 20px;
+    font-size: 1.3em;
+    box-shadow: 0px 0px 15px 1px #00000014;
+}
+
+div #produto_valor{
+    width: 40%;
+}
+
+div .inptData{
+    height: 100%;
+    width: 80%;
+}
+
+div .inptData select{
+    cursor: pointer;
+}
+
+form[name='produto'] .inptData:active{
+
+}
+form[name='produto'] .inptData{
+    display: flex;
+    margin-top: 0;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px #00000026;
+}
+
+form[name='produto'] .buttonControls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+form[name='produto'] .buttonControls div{
+    display: flex;
+    margin-top: 0;
+    align-content: center;
+}
+
+form[name='produto'] .buttonControls input,
+form[name='produto'] .buttonControls a,
+form[name='produto'] .buttonControls button{
+    padding: 8px 20px;
+    min-width: 140px;
+    text-align: center;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+form[name='produto'] .buttonControls input{
+    background-color: #DC3D32;
+}
+
+form[name='produto'] .buttonControls a{
+    background-color: #89837E;
+    text-decoration: none;
+}
+
+form[name='produto'] .buttonControls button{
+    background-color: #FF7A00;
 }

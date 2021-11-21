@@ -7,9 +7,20 @@
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <h1>TELA EDIÇÂO</h1>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
+    <div class="conteudo">
+        <div class="title">
+            <h2>Editar Produto</h2>
+        </div>
+        {{ form_start(form) }}
+            {{ form_row(form.nome) }}
+            {{ form_row(form.dataCompra) }}
+            {{ form_row(form.valor) }}
+            <div class="buttonControls">
+                <a href="{{ path('homepage') }}">Voltar</a>
+                <input type="button" value="Remover" />
+                {{ form_row(form.submit) }}
+            </div>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
 

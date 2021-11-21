@@ -16,7 +16,7 @@ class IndexController extends Controller
     {
         $produtos = $this->getDoctrine()
             ->getRepository(Produto::class)
-            ->findAll();
+            ->findAllOrderedById();
 
         return $this->render('index.html.twig', ['produtos'=>$produtos]);
     }
