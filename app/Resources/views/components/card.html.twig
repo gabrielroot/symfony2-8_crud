@@ -7,7 +7,7 @@
             <p>{{ item.dataCompra|date('m/y') }}</p>
         </div>
         <div class="valor">
-            <p>R$ {{ item.valor }}</p>
+            <p>R$ {{ item.valor|number_format(2, ',', '.') }}</p>
         </div>
     </div>
 </a>

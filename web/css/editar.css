@@ -103,7 +103,6 @@ form[name='produto'] .buttonControls div{
     align-content: center;
 }
 
-form[name='produto'] .buttonControls input,
 form[name='produto'] .buttonControls a,
 form[name='produto'] .buttonControls button{
     padding: 8px 20px;
@@ -116,15 +115,18 @@ form[name='produto'] .buttonControls button{
     cursor: pointer;
 }
 
-form[name='produto'] .buttonControls input{
-    background-color: #DC3D32;
-}
-
 form[name='produto'] .buttonControls a{
     background-color: #89837E;
     text-decoration: none;
 }
 
-form[name='produto'] .buttonControls button{
+form[name='produto'] .buttonControls .btnDelete{
+    background-color: #DC3D32;
+}
+form[name='produto'] .buttonControls .btnSubmit{
     background-color: #FF7A00;
+}
+
+form[name='produto'] .buttonControls #disableButton{
+    display: none;
 }

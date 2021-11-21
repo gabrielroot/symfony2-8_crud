@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Produto;
 use AppBundle\Form\ProdutoType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -25,11 +26,14 @@ class AdminController extends Controller
         if($form->isSubmitted() && $form->isValid()){
             $entityManager = $this->getDoctrine()->getManager();
 
-            $produto = $form->getData();
+            if($form->get('delete')->isClicked()){
+                $entityManager->remove($produto);
+            }else{
+                $produto = $form->getData();
+                $entityManager->merge($produto);
+            }
 
-            $entityManager->merge($produto);
             $entityManager->flush();
-
             return $this->redirectToRoute('homepage');
         }
 

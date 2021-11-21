@@ -11,7 +11,7 @@
     position: fixed;
     right: 50px;
     margin-top: 55vh;
-    border-radius: 20px;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

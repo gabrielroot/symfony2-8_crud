@@ -22,6 +22,21 @@ class ProdutoType extends AbstractType
             ->add('dataCompra', DateType::class,
                 [
                     'label' => 'Data de Compra',
+                    'years' => [
+                        '2010',
+                        '2011',
+                        '2012',
+                        '2013',
+                        '2014',
+                        '2015',
+                        '2016',
+                        '2017',
+                        '2018',
+                        '2019',
+                        '2020',
+                        '2021'
+                    ],
+                    'format'=> 'dMy',
                     'attr'=>['class'=>'inptData']
                 ]
             )
@@ -31,6 +46,14 @@ class ProdutoType extends AbstractType
                     'invalid_message' => 'O valor inserido não é valido',
                     'label' => 'R$ Valor',
                     'attr'=>['class'=>'inptValor']
+                ]
+            )
+
+            ->add('delete', SubmitType::class,
+                [
+                    'label' => 'Remover',
+                    'validation_groups' => false,
+                    'attr' => ['class' => 'btnDelete']
                 ]
             )
 

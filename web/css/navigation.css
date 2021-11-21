@@ -22,11 +22,14 @@
 
 .navigation div a{
     text-decoration: none;
-    color: #222222;
+    color: #541a04;
 }
 
 .navigation div:last-child{
-    background-color: #E2832B;
-    color: white;
+    color: #fff1ee;
     font-weight: normal;
+}
+
+.navigation div:hover{
+    background-color: #E2832B;
 }

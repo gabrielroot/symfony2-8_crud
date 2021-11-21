@@ -9,7 +9,13 @@
     {{ include('components/navigation.html.twig')}}
     <div class="conteudo">
         <div class="title">
-            <h2>Editar Produto</h2>
+            <h2>
+                {% if app.request.uriForPath('/novo') is same as(app.request.uri) %}
+                    Novo Produto
+                {% else %}
+                    Editar Produto
+                {% endif %}
+            </h2>
         </div>
         {{ form_start(form) }}
             {{ form_row(form.nome) }}
@@ -17,7 +23,9 @@
             {{ form_row(form.valor) }}
             <div class="buttonControls">
                 <a href="{{ path('homepage') }}">Voltar</a>
-                <input type="button" value="Remover" />
+                <div {{ app.request.uriForPath('/novo') is same as(app.request.uri)?"id='disableButton'":'' }}>
+                    {{ form_row(form.delete) }}
+                </div>
                 {{ form_row(form.submit) }}
             </div>
         {{ form_end(form) }}
