@@ -36,7 +36,7 @@ class ProdutoType extends AbstractType
                         '2020',
                         '2021'
                     ],
-                    'format'=> 'dd-MM-yyyy',
+                    'format'=> 'ddMMyyyy',
                     'attr'=>['class'=>'inptData']
                 ]
             )

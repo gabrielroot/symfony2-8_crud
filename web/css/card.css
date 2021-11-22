@@ -39,6 +39,7 @@
 
 .item div:first-of-type p:last-child{
     font-weight: normal;
+    font-size: 1.5em;
 }
 
 .item .valor{
