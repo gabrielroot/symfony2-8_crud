@@ -36,7 +36,7 @@ class ProdutoType extends AbstractType
                         '2020',
                         '2021'
                     ],
-                    'format'=> 'dMy',
+                    'format'=> 'dd-MM-yyyy',
                     'attr'=>['class'=>'inptData']
                 ]
             )
@@ -44,6 +44,7 @@ class ProdutoType extends AbstractType
             ->add('valor', NumberType::class,
                 [
                     'invalid_message' => 'O valor inserido não é valido',
+                    'scale' => 2,
                     'label' => 'R$ Valor',
                     'attr'=>['class'=>'inptValor']
                 ]
