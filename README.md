@@ -1,4 +1,4 @@
-# RootQuiz_SymfonyRestAPI
+# symfony2-8_crud
 Crud simples em Symfony, explorando o uso do twig e construção de aplicações monolíticas.
 
 ### Tecnologias
