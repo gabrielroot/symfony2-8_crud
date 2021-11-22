@@ -1,4 +1,4 @@
-# symfony2-8_crud
+# symfony2.8-crud
 Crud simples em Symfony, explorando o uso do twig e construção de aplicações monolíticas.
 
 ### Tecnologias
