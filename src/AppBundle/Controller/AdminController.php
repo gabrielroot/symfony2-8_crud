@@ -12,6 +12,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class AdminController extends Controller
 {
     /**
+     * @Route("/", name="homepage")
+     */
+    public function indexAction(Request $request)
+    {
+        $produtos = $this->getDoctrine()
+            ->getRepository(Produto::class)
+            ->findAllOrderedById();
+
+        return $this->render('index.html.twig', ['produtos'=>$produtos]);
+    }
+
+    /**
      * @Route("/editar/{id}", name="adminEditar")
      */
     public function adminEditar(Request $request, $id){

@@ -2,11 +2,13 @@
 
 namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class ProdutoType extends AbstractType
 {
@@ -15,7 +17,12 @@ class ProdutoType extends AbstractType
         $builder
             ->add('nome', TextType::class,
                 [
-                    'attr'=>['class'=>'inptNome']
+                    'attr'=>['class'=>'inptNome'],
+                    'constraints'=>[
+                        new NotBlank(),
+                        new Length(['min' => 10])
+                    ],
+                    'validation_groups' => 'O valor inserido não é valido',
                 ]
             )
 
