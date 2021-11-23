@@ -1,22 +1,47 @@
 version: '3.1'
 
 services:
-
-  db:
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
-    ports:
-      - 3306:3306
-    env_file: .env
+  app:
+    build:
+      context: ./.docker/app
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www/app
+    volumes:
+      - ./:/var/www/app
+      - ./.docker/app/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
-      - default
-
+      - gabriel_crud
+  nginx:
+    image: nginx:1.19
+    ports:
+      - 8007:80
+    volumes:
+      - ./:/var/www/app/
+      - ./.docker/nginx/conf.d:/etc/nginx/conf.d
+    working_dir: /var/www/app
+    networks:
+      - gabriel_crud
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: gabriel_crud
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./.docker/mysql/db:/var/lib/mysql
+      - ./.docker/mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - gabriel_crud
   adminer:
     image: adminer
     ports:
       - "5000:8080"
     networks:
-      - default
+      - gabriel_crud
 networks:
-  default:
+  gabriel_crud:
     driver: bridge
