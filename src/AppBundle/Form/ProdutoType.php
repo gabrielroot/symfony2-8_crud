@@ -57,14 +57,6 @@ class ProdutoType extends AbstractType
                 ]
             )
 
-            ->add('delete', SubmitType::class,
-                [
-                    'label' => 'Remover',
-                    'validation_groups' => false,
-                    'attr' => ['class' => 'btnDelete']
-                ]
-            )
-
             ->add('submit', SubmitType::class,
                 [
                     'label' => 'Salvar',

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/editar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ include('components/navigation.html.twig')}}
+    <div class="conteudo">
+        <div class="title">
+            <h2>Detalhes do Produto</h2>
+        </div>
+        {{ produto.nome }}<br/>
+        {{ produto.dataCompra|date('d/m/y') }}<br/>
+        {{ produto.valor }}
+    </div>
+{% endblock %}
+
