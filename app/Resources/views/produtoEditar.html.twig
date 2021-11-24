@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/editar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+{% endblock %}
+
+{% block body %}
+    {{ include('components/navigation.html.twig')}}
+    <div class="conteudo">
+        <div class="title">
+            <h2>Editar Produto</h2>
+        </div>
+        {{ form_start(formEdit) }}
+            {{ form_row(formEdit.nome) }}
+            {{ form_row(formEdit.dataCompra) }}
+            {{ form_row(formEdit.valor) }}
+            <div class="buttonControls">
+                <a href="{{ path('homepage') }}">Voltar</a>
+                {{ form_row(formEdit.submit) }}
+            </div>
+        {{ form_end(formEdit) }}
+        <div>
+            {{ form_start(formDelete, {'action': path('produtoDelete', {'id': id}), 'method': 'DELETE'}) }}
+            {{ form_widget(formDelete) }}
+            {{ form_end(formDelete) }}
+        </div>
+    </div>
+{% endblock %}
+
