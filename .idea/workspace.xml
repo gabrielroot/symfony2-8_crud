@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8bdad07-6610-4475-80fa-df00a17f59df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/produtoEditar.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/produtoShow.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crud2.8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crud2.8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/editar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produtoCriar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/cache/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" afterDir="false" />
-    </list>
+    <list default="true" id="c8bdad07-6610-4475-80fa-df00a17f59df" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +13,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/Resources/views/index.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Resources/views/components/card.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -71,6 +64,17 @@
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="21KC78o3ECbojuff5FTJswsaaeA" />
