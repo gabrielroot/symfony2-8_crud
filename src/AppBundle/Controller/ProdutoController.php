@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class ProdutoController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homepage",  methods={"GET"})
      */
     public function indexAction(Request $request)
     {
@@ -24,7 +24,7 @@ class ProdutoController extends Controller
     }
 
     /**
-     * @Route("/show/{id}", name="showProduto")
+     * @Route("/show/{id}", name="produtoShow", methods={"GET"})
      */
     public function showAction(Request $request, $id)
     {
@@ -53,7 +53,7 @@ class ProdutoController extends Controller
                 [
                     'label' => 'Remover',
                     'validation_groups' => false,
-                    'attr' => ['class' => 'btnDelete']
+                    'attr' => ['class' => 'btn btn-danger remove']
                 ]
             )
             ->getForm();
@@ -95,7 +95,7 @@ class ProdutoController extends Controller
     }
 
     /**
-     * @Route("/novo", name="produtoCreate")
+     * @Route("/novo", name="produtoCreate", methods={"POST", "GET"})
      */
     public function createAction(Request $request){
         $produto =  new Produto();

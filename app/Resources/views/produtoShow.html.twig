@@ -2,18 +2,32 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/editar.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
     <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
 {% endblock %}
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="conteudo">
+    <div class="container-fluid conteudo">
         <div class="title">
             <h2>Detalhes do Produto</h2>
         </div>
-        {{ produto.nome }}<br/>
-        {{ produto.dataCompra|date('d/m/y') }}<br/>
-        {{ produto.valor }}
+        <div class="produto">
+            <p class="h2"><span class="label label-default">Nome</span>{{ produto.nome }}</p>
+            <p class="h2"><span class="label label-default">Data de Compra</span> {{ produto.dataCompra|date('d/m/y') }}</p>
+            <p class="h2"><span class="label label-default">Valor</span> {{ produto.valor }}</p>
+        </div>
+        <div class="buttonControls">
+            <div class="container">
+                <div class="row btns">
+                    <div class="col-md-12">
+                        <a href="{{ path('homepage') }}">
+                            <input type="button" class="btn btn-primary btn-lg" value="Voltar">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
 

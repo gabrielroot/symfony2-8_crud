@@ -3,10 +3,15 @@
     color: #222222;
 }
 
+.linkItens:hover{
+    text-decoration: none !important;
+    color: #360f00 !important;
+}
+
 .item{
     display: flex;
     flex-direction: column;
-    margin: 18px;
+    margin: 20px;
     min-width: 240px;
     min-height: 250px;
     padding: 15px;

@@ -17,7 +17,7 @@ services:
   nginx:
     image: nginx:1.19
     ports:
-      - 8000:80
+      - "8000:80"
     volumes:
       - ./:/var/www/app/
       - ./.docker/nginx/conf.d:/etc/nginx/conf.d

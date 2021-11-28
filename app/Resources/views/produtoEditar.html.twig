@@ -7,24 +7,46 @@
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="conteudo">
-        <div class="title">
-            <h2>Editar Produto</h2>
-        </div>
-        {{ form_start(formEdit) }}
-            {{ form_row(formEdit.nome) }}
-            {{ form_row(formEdit.dataCompra) }}
-            {{ form_row(formEdit.valor) }}
-            <div class="buttonControls">
-                <a href="{{ path('homepage') }}">Voltar</a>
-                {{ form_row(formEdit.submit) }}
+    <div class="container-fluid conteudo">
+
+            <div class="title">
+                <h2>Editar Produto</h2>
             </div>
-        {{ form_end(formEdit) }}
-        <div>
+
+        <div class="col-md-8">
+            {{ form_start(formEdit) }}
+                {{ form_row(formEdit.nome) }}
+                {{ form_row(formEdit.dataCompra) }}
+                {{ form_row(formEdit.valor) }}
+                <div class="buttonControls">
+                    <div class="container">
+                        <div class="row btns">
+                            <div class="col-md-4">
+                                <a href="{{ path('homepage') }}">
+                                    <input type="button" class="btn btn-lg" value="Início">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#">
+                                    <input type="button" class="btn btn-lg btn-danger btnremove" value="Remover">
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#">
+                                    {{ form_row(formEdit.submit) }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{ form_end(formEdit) }}
             {{ form_start(formDelete, {'action': path('produtoDelete', {'id': id}), 'method': 'DELETE'}) }}
-            {{ form_widget(formDelete) }}
+                {{ form_widget(formDelete) }}
             {{ form_end(formDelete) }}
         </div>
     </div>
 {% endblock %}
 
+{% block javascripts %}
+    <script src="/js/editar.js"></script>
+{% endblock %}

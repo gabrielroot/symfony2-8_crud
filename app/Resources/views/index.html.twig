@@ -8,16 +8,15 @@
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="conteudo">
-        <a href="{{ path('produtoCreate') }}" class="floatingAdd">
-            <span class="material-icons">
-                add
-            </span>
-        </a>
+    <div class="container conteudo">
 
-        {% for item in produtos %}
-            {{ include('components/card.html.twig', { 'item': item }) }}
-        {% endfor %}
+        <div class="row">
+            {% for item in produtos %}
+                <div class="col-md-4">
+                    {{ include('components/card.html.twig', { 'item': item }) }}
+                </div>
+            {% endfor %}
+        </div>
 
     </div>
 {% endblock %}

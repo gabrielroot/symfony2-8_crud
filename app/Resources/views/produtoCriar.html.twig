@@ -7,19 +7,32 @@
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="conteudo">
+    <div class="container-fluid conteudo">
         <div class="title">
             <h2>Novo Produto</h2>
         </div>
+    <div class="col-md-8">
+        {% form_theme formNovo 'bootstrap_3_layout.html.twig' %}
         {{ form_start(formNovo) }}
             {{ form_row(formNovo.nome) }}
             {{ form_row(formNovo.dataCompra) }}
             {{ form_row(formNovo.valor) }}
             <div class="buttonControls">
-                <a href="{{ path('homepage') }}">Voltar</a>
-                {{ form_row(formNovo.submit) }}
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-6">
+                            <a href="{{ path('homepage') }}">
+                                <input type="button" class="btn btn-lg" value="Voltar">
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_row(formNovo.submit) }}
+                        </div>
+                    </div>
+                </div>
             </div>
         {{ form_end(formNovo) }}
+    </div>
     </div>
 {% endblock %}
 
