@@ -1,5 +1,6 @@
 .conteudo{
     display: flex;
+    padding: 0;
     flex-direction: column;
     align-items: center;
     margin-top: 85px;
@@ -22,112 +23,49 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 2.3em;
+    font-size: 2.5em;
     color: white;
     text-shadow: -1px 3px 5px #000000bd;
 }
 
-form[name='produto']{
-    height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
+form{
+    margin-top: 50px;
 }
 
-form[name='produto'] div{
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
+input[type='text'], select{
+    height: 45px !important;
+    font-size: 1.5em !important;
 }
 
-div label{
-    background-color: #FFC692;
-    padding: 10px;
-    width: 170px;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-div input[type='text']:focus,
-div .inptData select:focus{
-    box-shadow: 0px 0px 15px 1px #ff390066;
-}
-
-div input[type='text'],
-div .inptData select{
-    margin-left: 10px;
-    margin-right: 4px;
-    outline: none;
-    border: none;
-    height: 100%;
-    width: 80%;
-    padding: 0 20px;
-    font-size: 1.3em;
-    box-shadow: 0px 0px 15px 1px #00000014;
-}
-
-div #produto_valor{
-    width: 40%;
-}
-
-div .inptData{
-    height: 100%;
-    width: 80%;
-}
-
-div .inptData select{
+select{
     cursor: pointer;
 }
 
-form[name='produto'] .inptData:active{
-
-}
-form[name='produto'] .inptData{
+.buttonControls{
+    margin-top: 100px;
     display: flex;
-    margin-top: 0;
-    align-items: center;
-    box-shadow: 0px 1px 2px 0px #00000026;
-}
-
-form[name='produto'] .buttonControls{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: auto;
     width: 100%;
+    justify-content: space-between;
 }
 
-form[name='produto'] .buttonControls div{
+.btns div{
     display: flex;
-    margin-top: 0;
-    align-content: center;
+    justify-content: center;
 }
 
-form[name='produto'] .buttonControls a,
-form[name='produto'] .buttonControls button{
-    padding: 8px 20px;
-    min-width: 140px;
-    text-align: center;
-    font-size: 1.4em;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
+.buttonControls button, .buttonControls input{
+    min-width: 135px;
 }
 
-form[name='produto'] .buttonControls a{
-    background-color: #89837E;
-    text-decoration: none;
+input[value='Início']{
+    color: #ffff;
+    background-color: #545454;
 }
 
-form[name='produto'] .buttonControls .btnDelete{
-    background-color: #DC3D32;
-}
-form[name='produto'] .buttonControls .btnSubmit{
-    background-color: #FF7A00;
+input[value='Início']:hover{
+    color: #d9d9d9;
 }
 
-form[name='produto'] .buttonControls #disableButton{
+.remove{
     display: none;
 }

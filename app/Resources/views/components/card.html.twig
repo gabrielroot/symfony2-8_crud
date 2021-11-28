@@ -1,13 +1,13 @@
-<a class="linkItens" href="{{ path('adminEditar', {'id': item.id}) }}">
     <div class="item">
-        <p class="nomeItem">{{ item.nome }}</p>
-        <div class="date">
-            <p>Comprado em:</p>
-            <p class="dia">{{ item.dataCompra|date('d') }}</p>
-            <p>{{ item.dataCompra|date('m/y') }}</p>
-        </div>
-        <div class="valor">
-            <p>R$ {{ item.valor|number_format(2, ',', '.') }}</p>
-        </div>
+        <a class="linkItens" href="{{ path('produtoShow', {'id': item.id}) }}">
+            <p class="nomeItem">{{ item.nome }}</p>
+            <div class="date">
+                <p>Comprado em:</p>
+                <p class="dia">{{ item.dataCompra|date('d') }}</p>
+                <p>{{ item.dataCompra|date('m/y') }}</p>
+            </div>
+            <div class="valor">
+                <p>R$ {{ item.valor|number_format(2, ',', '.') }}</p>
+            </div>
+        </a>
     </div>
-</a>

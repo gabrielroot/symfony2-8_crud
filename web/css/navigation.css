@@ -1,35 +1,32 @@
-.navigation{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar{
     background-color: #FFA756;
     height: 80px;
     font-size: 2em;
-    color: #222222;
 }
 
-.navigation div{
-    display: flex;
-    align-items: center;
+.navbar div{
     height: 100%;
     padding: 0 20px;
     font-weight: 700;
-    cursor: pointer;
 }
 
-.navigation div a{
+.navbar-header{
+    align-items: center;
+    display: flex;
+}
+
+.navbar div .navbar-brand{
+    cursor: pointer;
+    font-size: 1.5em;
     text-decoration: none;
     color: #541a04;
 }
 
-.navigation div:last-child{
-    color: #fff1ee;
+.navbar .navbar-right{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    color: #fff1ee !important;
     font-weight: normal;
-}
-
-.navigation div:hover{
-    background-color: #E2832B;
 }
