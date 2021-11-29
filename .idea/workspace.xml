@@ -2,45 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdad07-6610-4475-80fa-df00a17f59df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/admin.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/css/bootstrap_bootstrap_1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/js/bootstrap_bootstrap_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/js/jquery.min_jquery.min_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/show.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/262b634.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/262b634_bootstrap.min_1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/editar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/mysql/db/ca.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/mysql/db/client-cert.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/mysql/db/public_key.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docker/mysql/db/server-cert.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/crud2.8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crud2.8.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/admin.html.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/components/navigation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/components/navigation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produtoCriar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produtoCriar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produtoEditar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produtoEditar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produtoShow.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produtoShow.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produtoCriar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoCriar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produtoEditar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoEditar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produtoShow.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoShow.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/AdminController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/card.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/card.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/editar.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/editar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/navigation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/navigation.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +35,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/app/Resources/views/index.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/Resources/views/components/card.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
@@ -159,6 +131,7 @@
       <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views/produto" />
       <recent name="$PROJECT_DIR$/.docker" />
       <recent name="$PROJECT_DIR$/.docker/app" />
     </key>
@@ -177,12 +150,24 @@
       <workItem from="1637776408750" duration="5334000" />
       <workItem from="1637842940868" duration="12172000" />
       <workItem from="1637929146570" duration="11753000" />
-      <workItem from="1638125219937" duration="16848000" />
+      <workItem from="1638125219937" duration="17648000" />
+      <workItem from="1638211991464" duration="5143000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -38,6 +38,7 @@
 
 # Assets and user uploads
 /web/bundles/
+/web/assets/
 /web/uploads/
 
 # PHPUnit
