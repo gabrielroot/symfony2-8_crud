@@ -20,9 +20,14 @@
         <div class="buttonControls">
             <div class="container">
                 <div class="row btns">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <a href="{{ path('homepage') }}">
-                            <input type="button" class="btn btn-primary btn-lg" value="Voltar">
+                            <input type="button" class="btn btn-default btn-lg" value="Voltar">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="{{ path('produtoUpdate', {'id': produto.id}) }}">
+                            <input type="button" class="btn btn-primary btn-lg" value="Editar">
                         </a>
                     </div>
                 </div>

@@ -20,7 +20,7 @@ class ProdutoController extends Controller
             ->getRepository(Produto::class)
             ->findAllOrderedById();
 
-        return $this->render('index.html.twig', ['produtos'=>$produtos]);
+        return $this->render('produto/produtoIndex.html.twig', ['produtos'=>$produtos]);
     }
 
     /**
@@ -31,7 +31,7 @@ class ProdutoController extends Controller
         $produto = $this->getDoctrine()
             ->getRepository(Produto::class)
             ->findOneBy(['id'=>$id]);
-        return $this->render('produtoShow.html.twig', ['produto'=>$produto]);
+        return $this->render('produto/produtoShow.html.twig', ['produto'=>$produto]);
     }
 
     /**
@@ -69,7 +69,7 @@ class ProdutoController extends Controller
             return $this->redirectToRoute('homepage');
         }
 
-        return $this->render('produtoEditar.html.twig', [
+        return $this->render('produto/produtoEditar.html.twig', [
             'id'=>$produto->getId(),
             'formEdit' => $formEdit->createView(),
             'formDelete' => $formDelete->createView()
@@ -125,7 +125,7 @@ class ProdutoController extends Controller
             return $this->redirectToRoute('homepage');
         }
 
-        return $this->render('produtoCriar.html.twig', [
+        return $this->render('produto/produtoCriar.html.twig', [
             'formNovo' => $form->createView()
         ]);
     }

@@ -2,20 +2,24 @@
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/card.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+{#    <link rel="stylesheet" href="{{ asset('css/card.css') }}">#}
 {% endblock %}
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
     <div class="container conteudo">
 
-        <div class="row">
+        <div class="row col-md-11">
             {% for item in produtos %}
-                <div class="col-md-4">
+                <div class="col-md-3 panel panel-default well">
                     {{ include('components/card.html.twig', { 'item': item }) }}
                 </div>
             {% endfor %}
+        </div>
+        <div class="row col-md-1">
+            <a href="{{ path('produtoCreate') }}" class="pull-right">
+                <span class="material-icons">add</span>
+            </a>
         </div>
 
     </div>
