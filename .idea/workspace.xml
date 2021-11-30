@@ -3,9 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="c8bdad07-6610-4475-80fa-df00a17f59df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoCriar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoCriar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoEditar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoEditar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoShow.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoShow.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/admin.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/editar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/show.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/262b634.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/262b634_bootstrap.min_1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/editar.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +157,8 @@
       <workItem from="1637929146570" duration="11753000" />
       <workItem from="1638125219937" duration="17648000" />
       <workItem from="1638211991464" duration="8629000" />
-      <workItem from="1638284658982" duration="1635000" />
+      <workItem from="1638284658982" duration="2334000" />
+      <workItem from="1638291095289" duration="7142000" />
     </task>
     <servers />
   </component>
