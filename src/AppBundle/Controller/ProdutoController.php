@@ -53,7 +53,7 @@ class ProdutoController extends Controller
                 [
                     'label' => 'Remover',
                     'validation_groups' => false,
-                    'attr' => ['class' => 'btn btn-danger remove']
+                    'attr' => ['class' => 'btn btn-danger btn-block']
                 ]
             )
             ->getForm();

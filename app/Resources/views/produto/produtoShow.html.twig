@@ -1,38 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/editar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 {% endblock %}
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="container-fluid conteudo">
-        <div class="title">
+    <div class="marginTopNavBar  panel panel-primary col-md-8 col-md-offset-2 well-sm">
+        <div class="panel-heading text-center">
             <h2>Detalhes do Produto</h2>
         </div>
-        <div class="produto">
-            <p class="h2"><span class="label label-default">Nome</span>{{ produto.nome }}</p>
-            <p class="h2"><span class="label label-default">Data de Compra</span> {{ produto.dataCompra|date('d/m/y') }}</p>
-            <p class="h2"><span class="label label-default">Valor</span> {{ produto.valor }}</p>
+        <div class="col-md-8 col-md-offset-2">
+
+            <p class="h2 text-nowrap"><strong>Nome</strong>: {{ produto.nome }}</p>
+            <p class="h2 text-nowrap"><strong>Data de Compra</strong>: {{ produto.dataCompra|date('d/m/y') }}</p>
+            <p class="h2 vertical-align"><span class="label label-default">Valor R$</span> {{ produto.valor|number_format(2, ',', '.') }}</p>
         </div>
-        <div class="buttonControls">
-            <div class="container">
-                <div class="row btns">
-                    <div class="col-md-6">
-                        <a href="{{ path('homepage') }}">
-                            <input type="button" class="btn btn-default btn-lg" value="Voltar">
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="{{ path('produtoUpdate', {'id': produto.id}) }}">
-                            <input type="button" class="btn btn-primary btn-lg" value="Editar">
-                        </a>
-                    </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-1">
+                    <a href="{{ path('homepage') }}">
+                        <input type="button" class="btn btn-default btn-lg btn-block" value="Voltar">
+                    </a>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                    <a href="{{ path('produtoUpdate', {'id': produto.id}) }}">
+                        <input type="button" class="btn btn-primary btn-lg btn-block" value="Editar">
+                    </a>
                 </div>
             </div>
         </div>
+
     </div>
 {% endblock %}
 
