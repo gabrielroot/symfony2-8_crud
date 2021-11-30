@@ -1,25 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-{#    <link rel="stylesheet" href="{{ asset('css/card.css') }}">#}
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 {% endblock %}
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="container conteudo">
+    <div class="container marginTopNavBar">
+            <a href="{{ path('produtoCreate') }}" class="floatingAdd">
+                <span class="material-icons">add</span>
+            </a>
 
-        <div class="row col-md-11">
+        <div class="row">
             {% for item in produtos %}
-                <div class="col-md-3 panel panel-default well">
+                <div class="col-md-3">
                     {{ include('components/card.html.twig', { 'item': item }) }}
                 </div>
             {% endfor %}
-        </div>
-        <div class="row col-md-1">
-            <a href="{{ path('produtoCreate') }}" class="pull-right">
-                <span class="material-icons">add</span>
-            </a>
         </div>
 
     </div>
