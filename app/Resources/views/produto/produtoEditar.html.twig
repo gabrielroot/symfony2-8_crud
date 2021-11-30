@@ -1,52 +1,47 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/editar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 {% endblock %}
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="container-fluid conteudo">
+    <div class="marginTopNavBar  panel panel-primary col-md-8 col-md-offset-2 well-sm">
 
-            <div class="title">
-                <h2>Editar Produto</h2>
-            </div>
+        <div class="panel-heading text-center">
+            <h2>Editar Produto</h2>
+        </div>
 
-        <div class="col-md-8">
+        <div class="col-md-8 col-md-offset-2">
             {{ form_start(formEdit) }}
                 {{ form_row(formEdit.nome) }}
                 {{ form_row(formEdit.dataCompra) }}
                 {{ form_row(formEdit.valor) }}
-                <div class="buttonControls">
-                    <div class="container">
-                        <div class="row btns">
-                            <div class="col-md-4">
-                                <a href="{{ path('homepage') }}">
-                                    <input type="button" class="btn btn-lg" value="Início">
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="#">
-                                    <input type="button" class="btn btn-lg btn-danger btnremove" value="Remover">
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="#">
-                                    {{ form_row(formEdit.submit) }}
-                                </a>
-                            </div>
+                <div class="container-fluid">
+                    <div class="row btns">
+                        <div class="col-md-4 col-md-offset-2">
+                            <a href="{{ path('homepage') }}">
+                                <input type="button" class="btn btn-lg btn-default btn-block" value="Início">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">
+                                {{ form_row(formEdit.submit) }}
+                            </a>
                         </div>
                     </div>
                 </div>
             {{ form_end(formEdit) }}
-            {{ form_start(formDelete, {'action': path('produtoDelete', {'id': id}), 'method': 'DELETE'}) }}
-                {{ form_widget(formDelete) }}
-            {{ form_end(formDelete) }}
+            <div class="container-fluid">
+                <div class="">
+                    {{ form_start(formDelete, {'action': path('produtoDelete', {'id': id}), 'method': 'DELETE'}) }}
+                        {{ form_widget(formDelete) }}
+                    {{ form_end(formDelete) }}
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block javascripts %}
-    <script src="/js/editar.js"></script>
 {% endblock %}

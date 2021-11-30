@@ -18,11 +18,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F08522;
+    background-color: #2d5a6b;
     width: 79px;
     height: 79px;
     text-decoration: none;
-    box-shadow: 0px 0px 18px 2px #b39066;
+    box-shadow: 0px 0px 18px 2px #1e2e3b;
 }
 
 .floatingAdd span{
@@ -32,6 +32,6 @@
 
 .floatingAdd:hover{
     text-decoration: none !important;
-    box-shadow: #361e07 1px 1px 16px 0px;
+    box-shadow: #0fafaf 1px 1px 16px 0px;
     transition: all 300ms;
 }
