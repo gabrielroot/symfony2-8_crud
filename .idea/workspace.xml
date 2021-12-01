@@ -2,22 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8bdad07-6610-4475-80fa-df00a17f59df" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/Exception/error404.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/404.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoCriar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoCriar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoEditar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoEditar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/components/card.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/components/produtoCard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/components/navigation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/components/navigation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/produto/produtoShow.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produto/produtoShow.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProdutoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/admin.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/card.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/editar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/show.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/262b634.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/262b634_bootstrap.min_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/editar.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +38,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/app/Resources/views/produto/produtoIndex.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/AppBundle/Form/ProdutoType.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/Resources/views/components/card.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/Resources/views/components/produtoCard.html.twig" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -123,19 +119,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/AppBundle/Form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.webpack" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception" />
+      <recent name="$PROJECT_DIR$/app/Resources/TwigBundle" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Form" />
       <recent name="$PROJECT_DIR$/src/AppBundle/Controller" />
       <recent name="$PROJECT_DIR$/app/Resources/views" />
-      <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources" />
+      <recent name="$PROJECT_DIR$/app/Resources/TwigBundle" />
       <recent name="$PROJECT_DIR$/app/Resources/views/produto" />
       <recent name="$PROJECT_DIR$/.docker" />
       <recent name="$PROJECT_DIR$/.docker/app" />
@@ -158,7 +157,8 @@
       <workItem from="1638125219937" duration="17648000" />
       <workItem from="1638211991464" duration="8629000" />
       <workItem from="1638284658982" duration="2334000" />
-      <workItem from="1638291095289" duration="7142000" />
+      <workItem from="1638291095289" duration="14036000" />
+      <workItem from="1638357163277" duration="6552000" />
     </task>
     <servers />
   </component>

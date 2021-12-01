@@ -14,7 +14,7 @@ class ProdutoController extends Controller
     /**
      * @Route("/", name="homepage",  methods={"GET"})
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
         $produtos = $this->getDoctrine()
             ->getRepository(Produto::class)
@@ -26,22 +26,15 @@ class ProdutoController extends Controller
     /**
      * @Route("/show/{id}", name="produtoShow", methods={"GET"})
      */
-    public function showAction(Request $request, $id)
+    public function showAction(Produto $produto)
     {
-        $produto = $this->getDoctrine()
-            ->getRepository(Produto::class)
-            ->findOneBy(['id'=>$id]);
         return $this->render('produto/produtoShow.html.twig', ['produto'=>$produto]);
     }
 
     /**
      * @Route("/editar/{id}", name="produtoUpdate", methods={"GET", "POST"})
      */
-    public function updateAction(Request $request, $id){
-
-        $produto =  $this->getDoctrine()
-            ->getRepository(Produto::class)
-            ->findOneBy(['id'=>$id]);
+    public function updateAction(Request $request, Produto $produto){
 
         $formEdit = $this->createForm(ProdutoType::class, $produto);
         $formEdit->handleRequest($request);
@@ -79,11 +72,7 @@ class ProdutoController extends Controller
     /**
      * @Route("/deletar/{id}", name="produtoDelete", methods={"DELETE"})
      */
-    public function deleteAction(Request $request, $id){
-
-        $produto =  $this->getDoctrine()
-            ->getRepository(Produto::class)
-            ->findOneBy(['id'=>$id]);
+    public function deleteAction(Produto $produto){
 
         $entityManager = $this->getDoctrine()
             ->getManager();
