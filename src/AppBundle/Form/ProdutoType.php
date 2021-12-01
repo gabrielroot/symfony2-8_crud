@@ -60,7 +60,7 @@ class ProdutoType extends AbstractType
             ->add('submit', SubmitType::class,
                 [
                     'label' => 'Salvar',
-                    'attr' => ['class' => 'btn btn-primary btn-lg']
+                    'attr' => ['class' => 'btn btn-primary btn-lg btn-block']
                 ]
             )
         ;

@@ -1,38 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('css/editar.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/navigation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
 {% endblock %}
 
 {% block body %}
     {{ include('components/navigation.html.twig')}}
-    <div class="container-fluid conteudo">
-        <div class="title">
-            <h2>Novo Produto</h2>
-        </div>
-    <div class="col-md-8">
-        {% form_theme formNovo 'bootstrap_3_layout.html.twig' %}
-        {{ form_start(formNovo) }}
-            {{ form_row(formNovo.nome) }}
-            {{ form_row(formNovo.dataCompra) }}
-            {{ form_row(formNovo.valor) }}
-            <div class="buttonControls">
-                <div class="container">
-                    <div class="row ">
-                        <div class="col-md-6">
-                            <a href="{{ path('homepage') }}">
-                                <input type="button" class="btn btn-lg" value="Início">
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            {{ form_row(formNovo.submit) }}
+    <div class="marginTopNavBar  panel panel-primary col-md-8 col-md-offset-2 well-sm">
+            <div class="panel-heading text-center">
+                <h2>Novo Produto</h2>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                {{ form_start(formNovo) }}
+                    {{ form_row(formNovo.nome) }}
+                    {{ form_row(formNovo.dataCompra) }}
+                    {{ form_row(formNovo.valor) }}
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-1">
+                                <a href="{{ path('homepage') }}">
+                                    <input type="button" class="btn btn-lg btn-default btn-block" value="Início">
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-md-offset-2">
+                                {{ form_row(formNovo.submit) }}
+                            </div>
                         </div>
                     </div>
-                </div>
+                {{ form_end(formNovo) }}
             </div>
-        {{ form_end(formNovo) }}
-    </div>
     </div>
 {% endblock %}
 

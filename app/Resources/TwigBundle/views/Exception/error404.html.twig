@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="{{ _charset }}" />
+    <title>Ocorreu um erro: {{ status_text }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="text-center">
+            <h1>Oops! Ocorreu um erro [{{ status_code }}]</h1>
+            <h2>A página que você procura não está aqui.</h2>
+            <div class="row well-lg">
+                <img src="{{ asset('img/404.png')}}" alt="Imagem com código de erro 404"/>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.js"></script>
+</body>
+</html>
