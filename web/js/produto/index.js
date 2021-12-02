@@ -12,6 +12,7 @@ const animateFloatingAdd = floatingAdd =>{
     floatingAdd.animate({width: '-=10px', height: '-=10px'}, "fast");
     floatingAdd.animate({right: '-=10px'}, 100);
     floatingAdd.animate({right: '+=20px'}, 100);
+    floatingAdd.animate({right: '-=10px'}, 100);
 }
 
 const hideAlert = alert => {
