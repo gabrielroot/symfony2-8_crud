@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Produto;
 use AppBundle\Form\ProdutoType;
+use Exception;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -14,7 +15,7 @@ class ProdutoController extends Controller
     /**
      * @Route("/", name="homepage",  methods={"GET"})
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $produtos = $this->getDoctrine()
             ->getRepository(Produto::class)
@@ -26,7 +27,7 @@ class ProdutoController extends Controller
     /**
      * @Route("/show/{id}", name="produtoShow", methods={"GET"})
      */
-    public function showAction(Produto $produto)
+    public function showAction(Produto $produto, Request $request)
     {
         return $this->render('produto/show.html.twig', ['produto'=>$produto]);
     }
@@ -56,9 +57,21 @@ class ProdutoController extends Controller
             $entityManager = $this->getDoctrine()->getManager();
 
             $produto = $formEdit->getData();
-            $entityManager->merge($produto);
 
-            $entityManager->flush();
+            try {
+                $entityManager->merge($produto);
+                $entityManager->flush();
+                $this->addFlash(
+                    'success',
+                    "O produto: \"".$produto->getNome()."\", foi atualizado!"
+                );
+            }catch (Exception $ex){
+                $this->addFlash(
+                    'error',
+                    "Erro ao atualizar o produto: \"".$produto->getNome()."\". Ocorreu um erro interno."
+                );
+            }
+
             return $this->redirectToRoute('homepage');
         }
 
@@ -77,8 +90,19 @@ class ProdutoController extends Controller
         $entityManager = $this->getDoctrine()
             ->getManager();
 
-        $entityManager->remove($produto);
-        $entityManager->flush();
+        try{
+            $entityManager->remove($produto);
+            $entityManager->flush();
+            $this->addFlash(
+                'success',
+                "O produto: \"".$produto->getNome()."\", foi removido!"
+            );
+        }catch (Exception $ex){
+            $this->addFlash(
+                'error',
+                "Erro ao remover o produto \"".$produto->getNome()."\". Ocorreu um erro interno."
+            );
+        }
 
         return $this->redirectToRoute('homepage');
     }
@@ -108,8 +132,19 @@ class ProdutoController extends Controller
 
             $produto = $form->getData();
 
-            $entityManager->persist($produto);
-            $entityManager->flush();
+            try{
+                $entityManager->persist($produto);
+                $entityManager->flush();
+                $this->addFlash(
+                    'success',
+                    "Um novo produto: \"".$produto->getNome()."\", foi criado!"
+                );
+            }catch (Exception $ex){
+                $this->addFlash(
+                    'error',
+                    "Erro ao cadastrar o produto: \"".$produto->getNome()."\". Ocorreu um erro interno."
+                );
+            }
 
             return $this->redirectToRoute('homepage');
         }
