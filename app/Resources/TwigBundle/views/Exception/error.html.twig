@@ -7,12 +7,11 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <link href="/assets/css/bootstrap.css" rel="stylesheet" />
     <link href="/css/base.css" rel="stylesheet" />
-    {% block stylesheets %}{% endblock %}
 </head>
 <body>
     <div class="container-fluid">
         <div class="text-center">
-            <h1>O servidor retornou o código de erro: {{{ status_code }}} - {{ status_text }}</h1>
+            <h1>O servidor retornou o código de erro: {{ status_code }} - {{ status_text }}</h1>
             <h2>Entre em contato com os administradores para mais informações.</h2>
         </div>
     </div>

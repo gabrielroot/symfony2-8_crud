@@ -9,6 +9,11 @@
     align-items: center;
 }
 
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+
 .floatingAdd{
     position: fixed;
     z-index: 2;
