@@ -17,9 +17,19 @@ class ProdutoController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $produtos = $this->getDoctrine()
-            ->getRepository(Produto::class)
-            ->findAllOrderedById();
+        $qb = $this->getDoctrine()->getManager()->createQueryBuilder('p');
+        $query = $qb->select('produto')
+            ->from('AppBundle:Produto', 'produto')
+            ->orderBy('produto.id', 'DESC')
+            ->getQuery();
+
+        $paginator = $this->get('knp_paginator');
+
+        $produtos = $paginator->paginate(
+            $query,
+            $request->query->getInt('pagina', 1),
+            8
+        );
 
         return $this->render('produto/index.html.twig', ['produtos'=>$produtos]);
     }
