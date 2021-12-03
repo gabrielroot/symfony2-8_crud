@@ -1,8 +1,10 @@
 $(document).ready(()=>{
     const floatingAdd = $(".floatingAdd")
-    const alert = $(".alert")
+    const alert = $(".flashAlert")
 
+    animateFlashAlert(alert)
     hideAlert(alert)
+
     animateFloatingAdd(floatingAdd)
 })
 
@@ -15,8 +17,15 @@ const animateFloatingAdd = floatingAdd =>{
     floatingAdd.animate({right: '-=10px'}, 100);
 }
 
+const animateFlashAlert = alert =>{
+    alert.animate({right: '+=100px'}, "fast");
+
+    alert.animate({right: '-=110px'}, 100);
+    alert.animate({right: '+=20px'}, 100);
+    alert.animate({right: '-=10px'}, 100);
+}
+
 const hideAlert = alert => {
-    alert.css('cursor', 'pointer')
     alert.click(()=>{
         alert.slideUp(200)
     })
