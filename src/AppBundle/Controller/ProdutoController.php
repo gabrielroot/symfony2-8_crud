@@ -17,11 +17,9 @@ class ProdutoController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $qb = $this->getDoctrine()->getManager()->createQueryBuilder('p');
-        $query = $qb->select('produto')
-            ->from('AppBundle:Produto', 'produto')
-            ->orderBy('produto.id', 'DESC')
-            ->getQuery();
+        $query = $this->container
+            ->get('query_index_product')
+            ->getQueryProduto();
 
         $paginator = $this->get('knp_paginator');
 
@@ -147,7 +145,7 @@ class ProdutoController extends Controller
                 $entityManager->flush();
                 $this->addFlash(
                     'success',
-                    "Um novo produto: \"".$produto->getNome()."\", foi criado!"
+                    "O produto: \"".$produto->getNome()."\", foi criado!"
                 );
             }catch (Exception $ex){
                 $this->addFlash(
