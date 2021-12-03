@@ -9,6 +9,11 @@
     align-items: center;
 }
 
+.horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+
 .floatingAdd{
     position: fixed;
     z-index: 2;
@@ -39,4 +44,11 @@
 .floatingAdd span:hover{
     font-size: 90px;
     transition: all 200ms;
+}
+
+.flashAlert{
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    z-index: 1030;
 }

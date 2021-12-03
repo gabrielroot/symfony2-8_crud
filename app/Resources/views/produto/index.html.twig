@@ -10,6 +10,39 @@
         <span class="material-icons">add</span>
     </a>
     <div class="container marginTopNavBar">
+        {% if app.session.flashBag.has('error') %}
+            <div class="alert alert-error flashAlert">
+                {% for msg in app.session.flashBag.get('error') %}
+                    {{ msg }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if app.session.flashBag.has('success') %}
+            <div class="alert alert-success flashAlert">
+                {% for msg in app.session.flashBag.get('success') %}
+                    {{ msg }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="well-lg">
+            <p>Ordenar Por: </p>
+
+            <table>
+                <tr>
+                    <th>{{ knp_pagination_sortable(produtos, 'Id', 'produto.id') }}</th>
+                    <th{% if produtos.isSorted('produto.nome') %} class="sorted"{% endif %}>
+                        {{ knp_pagination_sortable(produtos, 'Nome', 'produto.nome') }}
+                    </th>
+                    <th{% if produtos.isSorted('produto.dataCompra') %} class="sorted"{% endif %}>
+                        {{ knp_pagination_sortable(produtos, 'Data de Compra', 'produto.dataCompra') }}
+                    </th>
+                    <th{% if produtos.isSorted('produto.valor') %} class="sorted"{% endif %}>
+                        {{ knp_pagination_sortable(produtos, 'Valor', 'produto.valor') }}
+                    </th>
+                </tr>
+            </table>
+        </div>
 
         <div class="row">
             {% for item in produtos %}
@@ -20,5 +53,14 @@
         </div>
 
     </div>
+    <div class="col-md-12">
+        <nav aria-label="Page navigation" class="horizontal-center">
+            {{ knp_pagination_render(produtos) }}
+        </nav>
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/produto/index.js') }}"></script>
 {% endblock %}
 
