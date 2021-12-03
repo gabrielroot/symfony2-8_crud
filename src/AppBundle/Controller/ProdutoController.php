@@ -4,9 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Produto;
 use AppBundle\Form\ProdutoType;
-use Doctrine\ORM\QueryBuilder;
 use Exception;
-use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
