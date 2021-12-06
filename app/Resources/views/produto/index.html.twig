@@ -8,6 +8,7 @@
     {{ include('components/navigation.html.twig')}}
     <a href="{{ path('produtoCreate') }}" class="floatingAdd">
         <span class="material-icons">add</span>
+        <p class="hidden">Novo Produto</p>
     </a>
     <div class="container marginTopNavBar">
         {% if app.session.flashBag.has('error') %}
