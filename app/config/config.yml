@@ -41,7 +41,7 @@ knp_paginator:
         filter_value_name: filterValue  # filter value query parameter name
     template:
         pagination: 'produto/pagination.html.twig'  #Navigation template
-        sortable: '@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig' # sort link template
+        sortable: 'produto/sorting.html.twig' # sort link template
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
 
 # Twig Configuration
