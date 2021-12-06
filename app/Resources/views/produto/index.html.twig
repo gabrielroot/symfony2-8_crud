@@ -48,7 +48,7 @@
         <div class="row">
             {% for item in produtos %}
                 <div class="col-md-3">
-                    {{ include('components/produtoCard.html.twig', { 'item': item }) }}
+                    {{ include('produto/produtoCard.html.twig', { 'item': item }) }}
                 </div>
             {% endfor %}
         </div>

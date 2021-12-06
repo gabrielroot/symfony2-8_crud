@@ -6,7 +6,7 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: pt
 
 framework:
     #esi: ~
@@ -40,8 +40,8 @@ knp_paginator:
         filter_field_name: filterField  # filter field query parameter name
         filter_value_name: filterValue  # filter value query parameter name
     template:
-        pagination: 'produto/pagination.html.twig'  #Navigation template
-        sortable: 'produto/sorting.html.twig' # sort link template
+        pagination: '@KnpPaginatorCustom/pagination/pagination.html.twig'  #Navigation template
+        sortable: '@KnpPaginatorCustom/pagination/sorting.html.twig' # sort link template
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
 
 # Twig Configuration
@@ -49,6 +49,8 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     form_themes: ['bootstrap_3_layout.html.twig']
+    paths:
+          '%kernel.root_dir%/Resources/Knp-paginator-bundle/views': KnpPaginatorCustom
 
 assetic:
     debug:          '%kernel.debug%'
